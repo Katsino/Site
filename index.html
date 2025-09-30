@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Your Meal</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(to right, #f8f9fa, #e9ecef);
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px 40px;
+      width: 900px;
+      border-radius: 15px;
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #4b0082;
+    }
+
+    .section-title {
+      font-weight: bold;
+      font-size: 22px;
+      margin: 25px 0 15px;
+      padding-bottom: 5px;
+      border-bottom: 3px solid #ddd;
+      color: #333;
+    }
+
+    .meal-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .meal-card {
+      background: #f8f9fa;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .meal-card:hover {
+      transform: scale(1.03);
+    }
+
+    .meal-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      background: #ddd;
+    }
+
+    .meal-card label {
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .meal-card .price {
+      color: #4b0082;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .meal-card .options {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .meal-card input[type="number"] {
+      width: 60px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .customer-info {
+      margin-top: 30px;
+    }
+
+    .customer-info label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .customer-info input, 
+    .customer-info select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    .gender-options {
+      margin-top: 5px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      margin-top: 30px;
+      background: #4b0082;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .submit-btn:hover {
+      background: #6a0dad;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>🍽 Order Your Meal</h2>
+
+    <!-- Appetizers -->
+    <div class="section-title">🌯 Appetizers</div>
+    <div class="meal-grid">
+      <div class="meal-card">
+        <img src="spring rolls.jpg" alt="Spring Rolls">
+        <label><input type="checkbox"> Spring Rolls</label>
+        <div class="price">₱120</div>
+        <div class="options">
+          Qty: <input type="number" min="0" value="0">
+        </div>
+      </div>
+      <div class="meal-card">
+        <img src="garlic.jpg" alt="Garlic Bread">
+        <label><input type="checkbox"> Garlic Bread</label>
+        <div class="price">₱100</div>
+        <div class="options">
+          Qty: <input type="number" min="0" value="0">
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Dishes -->
+    <div class="section-title">🍛 Main Dishes</div>
+    <div class="meal-grid">
+      <div class="meal-card">
+        <img src="SPAG.jpeg" alt="Spaghetti Bolognese">
+        <label><input type="checkbox"> Spaghetti Bolognese</label>
+        <div class="price">₱250</div>
+        <div class="options">
+          Qty: <input type="number" min="0" value="0">
+        </div>
+      </div>
+      <div class="meal-card">
+        <img src="CHICKOR.jpg" alt="Grilled Chicken">
+        <label><input type="checkbox"> Grilled Chicken</label>
+        <div class="price">₱200</div>
+        <div class="options">
+          Qty: <input type="number" min="0" value="0">
+        </div>
+      </div>
+    </div>
+
+    <!-- Desserts -->
+    <div class="section-title">🍰 Desserts</div>
+    <div class="meal-grid">
+      <div class="meal-card">
+        <img src="SIKOLIT.jpg" alt="Chocolate Cake">
+        <label><input type="checkbox"> Chocolate Cake</label>
+        <div class="price">₱150</div>
+        <div class="options">
+          Qty: <input type="number" min="0" value="0">
+        </div>
+      </div>
+      <div class="meal-card">
+        <img src="SURBITIS.jpg" alt="Ice Cream">
+        <label><input type="checkbox"> Ice Cream</label>
+        <div class="price">₱100</div>
+        <div class="options">
+          Qty: <input type="number" min="0" value="0">
+        </div>
+      </div>
+    </div>
+
+    <!-- Beverages -->
+    <div class="section-title">🥤 Beverages</div>
+    <div class="meal-grid">
+      <div class="meal-card">
+        <img src="KOPII.jpg" alt="Coffee">
+        <label><input type="checkbox"> Coffee</label>
+        <div class="price">₱80</div>
+        <div class="options">
+          Qty: <input type="number" min="0" value="0">
+        </div>
+      </div>
+      <div class="meal-card">
+        <img src="TEA.jpg" alt="Iced Tea">
+        <label><input type="checkbox"> Iced Tea</label>
+        <div class="price">₱70</div>
+        <div class="options">
+          Qty: <input type="number" min="0" value="0">
+        </div>
+      </div>
+    </div>
+
+    <!-- Customer Info -->
+    <div class="section-title">👤 Customer Info</div>
+    <form id="orderForm">
+      <div class="customer-info">
+        <label>Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label>Email:</label>
+        <input type="text" id="email" placeholder="Enter your email" required>
+
+        <label>Contact Number:</label>
+        <input type="text" id="contact" placeholder="Enter your 11-digit number" required maxlength="11">
+
+        <label>Country:</label>
+        <select id="country" required>
+          <option value="">-- Select Country --</option>
+          <option value="Philippines">Philippines</option>
+          <option value="Japan">Japan</option>
+          <option value="USA">USA</option>
+          <option value="Canada">Canada</option>
+          <option value="UK">UK</option>
+        </select>
+
+        <label>Address:</label>
+        <input type="text" id="address" placeholder="Enter your address" required>
+
+        <label>Gender:</label>
+        <div class="gender-options">
+          <label><input type="radio" name="gender" value="Male" required> Male</label>
+          <label><input type="radio" name="gender" value="Female" required> Female</label>
+          <label><input type="radio" name="gender" value="Other" required> Other</label>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">Submit Order</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("orderForm").addEventListener("submit", function(event) {
+      const contact = document.getElementById("contact").value;
+      const email = document.getElementById("email").value;
+
+      // Validate contact (11 digits only)
+      const validContact = /^\d{11}$/.test(contact);
+
+      // Validate email (must contain @)
+      const validEmail = /^[^@]+@[^@]+\.[^@]+$/.test(email);
+
+      if (!validContact) {
+        alert("⚠️ Contact number must be exactly 11 digits (numbers only).");
+        event.preventDefault();
+        return;
+      }
+
+      if (!validEmail) {
+        alert("⚠️ Please enter a valid email address (must contain @).");
+        event.preventDefault();
+        return;
+      }
+
+      // If valid, go to thank you page
+      event.preventDefault();
+      window.location.href = "thankyou.html";
+    });
+
+    // Prevent typing letters in contact field
+    document.getElementById("contact").addEventListener("input", function() {
+      this.value = this.value.replace(/[^0-9]/g, ""); 
+      if (this.value.length > 11) this.value = this.value.slice(0, 11); 
+    });
+  </script>
+
+</body>
+</html>
